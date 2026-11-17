@@ -499,6 +499,26 @@
       const guess = key && countries[key] ? key : owner ? owner[0] : "";
       if (guess && csel) csel.value = guess;
     },
+    "home-contact-form": (el) => {
+      const groups = programGroups().map(([label, list]) => `<optgroup label="${label}">${list.map((o) => `<option value="${o.id}">${o.label}</option>`).join("")}</optgroup>`).join("");
+      const ctry = countryEntries().map(([k, c]) => `<option value="${k}">${c.name}</option>`).join("") + '<option value="other">Other / not sure yet</option>';
+      el.innerHTML = `
+        <form class="form" data-form data-success-title="Thank you. Your message is on its way." data-success-text="I read every enquiry personally and will reply within one working day." novalidate>
+          <div class="form__body">
+            <input type="hidden" name="_subject" value="New website enquiry (home page)">
+            <div class="form__row">${fText("h-name", "full_name", "Full name", { ac: "name" })}${fText("h-email", "email", "Email address", { type: "email", ac: "email" })}</div>
+            <div class="form__row">${fPhone("h-phone")}${fSelect("h-program", "service", "Service of interest", selectOptions("Select a service", groups))}</div>
+            ${fSelect("h-country", "country", "Destination country", selectOptions("Select a country", ctry))}
+            ${fArea("h-msg", "message", "Tell me briefly about your plans (optional)")}
+            ${fCheck("h-consent", "consent", consentText)}
+            <p class="form__status" role="alert" aria-live="assertive"></p>
+            <button class="btn btn--gold btn--block" type="submit"><span class="btn__label">Send Enquiry</span>${ic("arrow-right")}</button>
+            <p class="form__hint">${ic("clock")} Takes about a minute. Fields marked * are required.</p>
+          </div>
+        </form>`;
+      const ta = $("textarea", el);
+      if (ta) ta.rows = 3;
+    },
     "diy-form": (el) => {
       const ctry = countryEntries().map(([k, c]) => `<option value="${k}">${c.name}</option>`).join("");
       el.innerHTML = `
