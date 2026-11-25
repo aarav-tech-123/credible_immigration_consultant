@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Client Testimonials | Your Brand Immigration Consultancy</title>
+  <meta name="description" content="Read what clients say about their PR, study and visitor visa journeys to Canada and Australia, and filter stories by visa type.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Client Testimonials | Your Brand Immigration Consultancy">
+  <meta property="og:description" content="Stories from clients who trusted a personal approach to immigration.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=75">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#111827">
+  <link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>document.documentElement.classList.add("js");</script>
+  <script src="https://unpkg.com/lucide@0.469.0/dist/umd/lucide.min.js" defer></script>
+  <script src="js/data.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body data-page="testimonials">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="preloader" id="preloader" aria-hidden="true"><div class="preloader__bar"></div></div>
+  <div id="site-header"></div>
+
+  <main id="main">
+    <section class="banner grain on-dark">
+      <div class="banner__media" data-parallax="0.2" data-parallax-mode="scroll"><img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1920&q=75" alt="" fetchpriority="high" decoding="async"></div>
+      <div class="container banner__in">
+        <nav class="crumbs" aria-label="Breadcrumb"><ol><li><a href="index.html">Home</a></li><li aria-current="page">Testimonials</li></ol></nav>
+        <h1>Testimonials</h1>
+        <p>Real journeys, in the words of the people who took them.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="tabs tabs--center reveal" data-tfilter role="group" aria-label="Filter testimonials">
+          <button class="tab is-active" type="button" data-filter="All" aria-pressed="true">All</button>
+          <button class="tab" type="button" data-filter="PR" aria-pressed="false">PR</button>
+          <button class="tab" type="button" data-filter="Study" aria-pressed="false">Study</button>
+          <button class="tab" type="button" data-filter="Visitor" aria-pressed="false">Visitor</button>
+        </div>
+        <div class="testi-grid" data-render="testimonial-grid"></div>
+        <p class="note center">Sample testimonials are shown for design purposes. Replace them with genuine, consented client reviews before launch.</p>
+      </div>
+    </section>
+
+    <div data-component="trust"></div>
+    <div data-component="cta" data-title="Write the next success story" data-text="Start with a conversation. I would be glad to hear about your plans."></div>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>
