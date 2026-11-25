@@ -42,7 +42,6 @@
 
   const socialLinks = (cls = "") =>
     `<span class="social ${cls}">
-      <a href="${site.social.linkedin}" target="_blank" rel="noopener" aria-label="LinkedIn">${ic("linkedin")}</a>
       <a href="${site.social.facebook}" target="_blank" rel="noopener" aria-label="Facebook">${ic("facebook")}</a>
       <a href="${site.social.instagram}" target="_blank" rel="noopener" aria-label="Instagram">${ic("instagram")}</a>
     </span>`;
@@ -185,13 +184,12 @@
               <ul class="footer__contact">
                 <li>${ic("phone")}<a href="tel:${site.phoneHref}">${site.phone}</a></li>
                 <li>${ic("mail")}<a href="mailto:${site.email}">${site.email}</a></li>
-                <li>${ic("map-pin")}<span>${site.address}</span></li>
               </ul>
               ${socialLinks()}
             </div>
           </div>
           <div class="footer__bottom">
-            <p class="footer__legal">&copy; <span id="year">${new Date().getFullYear()}</span> ${site.brand}. All rights reserved. &nbsp;·&nbsp; ${site.licences.rcic} &nbsp;·&nbsp; ${site.licences.mara} &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+            <p class="footer__legal">&copy; <span id="year">${new Date().getFullYear()}</span> ${site.brand}. All rights reserved. &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></p>
             <p class="footer__disclaimer">Information on this website is general in nature and is not legal advice. Immigration rules change frequently; always verify with official government sources.</p>
           </div>
         </div>
@@ -215,11 +213,11 @@
           <div class="trust__badges">
             <a class="trust__badge" href="${site.regulators.cicc}" target="_blank" rel="noopener">
               <span class="trust__seal">${ic("shield-check")}</span>
-              <span><strong>College of Immigration and Citizenship Consultants</strong><small>RCIC badge placeholder · ${site.licences.rcic}</small></span>
+              <span><strong>College of Immigration and Citizenship Consultants</strong></span>
             </a>
             <a class="trust__badge" href="${site.regulators.mara}" target="_blank" rel="noopener">
               <span class="trust__seal">${ic("badge-check")}</span>
-              <span><strong>Migration Agents Registration Authority</strong><small>MARA badge placeholder · ${site.licences.mara}</small></span>
+              <span><strong>Migration Agents Registration Authority</strong></span>
             </a>
           </div>
         </div>
@@ -565,14 +563,12 @@
           <li>${ic("phone")}<span><small>Phone</small><a href="tel:${site.phoneHref}">${site.phone}</a></span></li>
           <li>${ic("mail")}<span><small>Email</small><a href="mailto:${site.email}">${site.email}</a></span></li>
           <li>${ic("message-circle")}<span><small>WhatsApp</small><a href="https://wa.me/${site.whatsapp}?text=${encodeURIComponent(site.whatsappMessage)}" target="_blank" rel="noopener">Click to chat</a></span></li>
-          <li>${ic("map-pin")}<span><small>Office</small>${site.address}</span></li>
         </ul>
         <h3>Office hours</h3>
         <dl class="hours">${site.hours.map(([d, t]) => `<div><dt>${d}</dt><dd>${t}</dd></div>`).join("")}</dl>
         <h3>Follow</h3>
         ${socialLinks()}`;
     },
-    "map": (el) => { el.src = site.mapEmbed; },
     "notify-form": (el) => {
       el.innerHTML = `
         <form class="form form--inline" data-form data-success-title="You are on the list." data-success-text="I will email you as soon as Business Visa services open." novalidate>

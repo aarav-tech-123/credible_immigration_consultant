@@ -16,31 +16,25 @@ const site = {
   brand: "Credible Immigration Consultants",
   monogram: "CIC",
   descriptor: "Immigration Consultancy",
-  phone: "+1 (555) 010-2345",
-  phoneHref: "+15550102345",
-  email: "hello@gmail.com",
-  whatsapp: "1234567890", // digits only, with country code
+  phone: "+91 76960 76199",
+  phoneHref: "+917696076199",
+  email: "info@credibleimmigrationconsultant.com",
+  whatsapp: "917696076199", // digits only, with country code
   whatsappMessage: "Hello, I would like to discuss my immigration plans.",
   booking: "https://calendly.com/your-booking-link", // <- replace with your Calendly URL
   formEndpoint: "https://formspree.io/f/YOUR_FORM_ID", // <- replace with your Formspree endpoint
-  address: "123 Placeholder Street, Your City, Province / State",
   hours: [
     ["Monday – Friday", "9:00 am – 6:00 pm"],
     ["Saturday", "10:00 am – 2:00 pm"],
     ["Sunday", "Closed"]
   ],
-  licences: {
-    rcic: "RCIC Licence #R______",
-    mara: "MARA Registration #_______"
-  },
   regulators: {
     cicc: "https://college-ic.ca/",
     mara: "https://www.mara.gov.au/"
   },
   social: {
-    linkedin: "https://www.linkedin.com/",
-    facebook: "https://www.facebook.com/",
-    instagram: "https://www.instagram.com/"
+    facebook: "https://www.facebook.com/credibleimmigrationconsultants/",
+    instagram: "https://www.instagram.com/credibleimmigration?igsh=MWc2ZTAxMnYzYXlsNA=="
   },
   /* Hero statistics (placeholders: replace with figures you can substantiate) */
   stats: [
@@ -49,8 +43,7 @@ const site = {
     { value: 2, suffix: "", label: "Countries" }
   ],
   showFeeFrom: true, // set to false to hide the "Starting from" line on the DIY page
-  feeFrom: "$___",
-  mapEmbed: "https://www.google.com/maps?q=Toronto&output=embed" // <- replace with your Google Maps embed URL
+  feeFrom: "$___"
 };
 
 /* --------------------------------------------------------------------------

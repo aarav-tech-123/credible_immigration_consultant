@@ -35,14 +35,13 @@ Open `js/data.js` and edit the `site` object:
 | Field | What it does |
 | --- | --- |
 | `brand`, `monogram`, `descriptor` | Logo wordmark and monogram. The preloader monogram is also written in each page's `<div class="preloader">`. |
-| `phone`, `phoneHref`, `email`, `whatsapp` | Top bar, footer, contact page, WhatsApp button. |
-| `licences.rcic`, `licences.mara` | Licence numbers shown in the footer, trust strip and About page. |
-| `social` | LinkedIn, Facebook and Instagram links. |
+| `phone`, `phoneHref`, `email`, `whatsapp` | Top bar, footer, contact page, WhatsApp button. The email is also written in `privacy.html`. |
+| `social` | Facebook and Instagram links. |
 | `stats` | The hero statistics card. **Use only figures you can substantiate.** Regulated advertising rules apply. |
 | `showFeeFrom`, `feeFrom` | The optional "Starting from $___" line on the DIY page. Set `showFeeFrom: false` to hide it. |
-| `address`, `hours`, `mapEmbed` | Contact page details and map. |
+| `hours` | Office hours on the contact page. |
 
-Also replace "Your Name" and the "RCIC Licence #R______" and "MARA Registration #_______" text in `about.html`, and the contact email in `privacy.html`.
+Also replace "Your Name" in `about.html`.
 
 ## How navigation is generated
 
@@ -159,7 +158,7 @@ In `js/data.js`, set `booking` to your Calendly (or similar) URL. Every "Book an
 
 - Each page has its own `<title>`, meta description and Open Graph tags. Update them with your real brand name and domain.
 - Replace Unsplash photos with images you have rights to use, ideally saved in `assets/images/` and compressed.
-- Add your real licence numbers, regulator badges and genuine testimonials.
+- Add regulator badges and genuine testimonials.
 - Have `privacy.html` reviewed and adapted by a qualified professional.
 - Immigration content here is general information. Verify all program details against official sources before publishing.
 
